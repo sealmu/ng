@@ -1,0 +1,21 @@
+<div>
+  <div>Register Component</div>
+  <!-- <div>{{ isSubmitting$ | async }}</div>
+  <div>---------</div> -->
+  <a [routerLink]="['/']">Home</a>
+
+  <med-errors *ngIf="errors$ | async" [errors]="errors$ | async"></med-errors>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <fieldset>
+      <input placeholder="user name" formControlName="username" />
+    </fieldset>
+    <fieldset>
+      <input placeholder="email" formControlName="email" />
+    </fieldset>
+    <fieldset>
+      <input placeholder="password" formControlName="password" />
+    </fieldset>
+    <button [disabled]="isSubmitting$ | async" type="submit">SEND</button>
+  </form>
+</div>
