@@ -1,2 +1,0 @@
-# ng
-Created with CodeSandbox
